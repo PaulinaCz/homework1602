@@ -8,9 +8,21 @@ public class CheckingBracketsTest {
 
 
     @Test
-    public void shouldReturnTrueIfCodeIsEmpty(){
+    public void shouldReturnTrueWhenStringIsEmpty(){
         //given
         String str = " ";
+
+        //when
+        boolean result = checkingBrackets.areBracketsClosing(str);
+
+        //then
+        assertTrue(result);
+
+    }
+    @Test
+    public void shouldReturnTrueWhenStringHasClosingBracketsOnly(){
+        //given
+        String str = " {} []";
 
         //when
         boolean result = checkingBrackets.areBracketsClosing(str);
