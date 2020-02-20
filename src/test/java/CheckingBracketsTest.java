@@ -2,19 +2,21 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CheckingBracketsTest {
+public class CheckingBracketsTest {
 
-    ReadFile file = new ReadFile();
-    String stringToCheck = file.readFileOfCode("C:\\SDA\\homework1602\\bracketsonlycode");
+    CheckingBrackets checkingBrackets = new CheckingBrackets();
+
 
     @Test
-    public void checkingCodeWithBracketsOnly(){
+    public void shouldReturnTrueIfCodeIsEmpty(){
         //given
-
+        String str = " ";
 
         //when
+        boolean result = checkingBrackets.areBracketsClosing(str);
 
         //then
+        assertTrue(result);
 
     }
 

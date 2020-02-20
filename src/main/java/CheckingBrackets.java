@@ -1,8 +1,12 @@
+import java.util.Stack;
+
 public class CheckingBrackets {
 
+    public CheckingBrackets() {
+    }
 
-    String stringToCheck = new ReadFile().readFileOfCode("C:\\SDA\\homework1602\\code");
+    public boolean areBracketsClosing(String str) {
 
-
-
+        return true;
+    }
 }
