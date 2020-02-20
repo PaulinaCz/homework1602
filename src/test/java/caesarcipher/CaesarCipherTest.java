@@ -34,4 +34,32 @@ public class CaesarCipherTest {
        assertEquals(expectedOutput, result);
    }
 
+
+   @Test
+    public void shouldDecryptFullInput(){
+       //given
+       String str = "Ala ma kota!";
+       int shift = 1;
+       String expectedOutput = "Bmb nb lpub!";
+
+       //when
+       String result = cipher.decryptCipher(str, shift);
+
+       //then
+       assertEquals(expectedOutput, result);
+   }
+   @Test
+   public void shouldDecryptFullInputOfASCIIHighValueLetters(){
+      //given
+      String str = "WXYZ!";
+      int shift = 7;
+      String expectedOutput = "DEFG!";
+
+      //when
+      String result = cipher.decryptCipher(str, shift);
+
+      //then
+      assertEquals(expectedOutput, result);
+   }
+
 }
