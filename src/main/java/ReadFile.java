@@ -7,7 +7,7 @@ public class ReadFile {
 
     public String readFileOfCode(String file){
 
-        Path filePath = Paths.get("C:\\SDA\\homework1602\\code");
+        Path filePath = Paths.get(file);
         StringBuilder sb = new StringBuilder();
         try
         {
